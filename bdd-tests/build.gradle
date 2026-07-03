@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':common-lib')
+    testImplementation 'org.jbehave:jbehave-core:5.2.0'
+    testImplementation 'org.jbehave:jbehave-spring:5.2.0'
+    testImplementation 'io.rest-assured:rest-assured:5.5.1'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.11.4'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind'
+}
+
+test {
+    useJUnitPlatform {
+        includeTags 'bdd'
+    }
+    systemProperty 'bdd.base.url', System.getProperty('bdd.base.url', 'http://localhost:8080/api')
+}

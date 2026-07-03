@@ -1,0 +1,10 @@
+rootProject.name = 'restaurant-management-system'
+
+include 'common-lib'
+include 'service-registry'
+include 'api-gateway'
+include 'user-service'
+include 'restaurant-service'
+include 'order-service'
+include 'delivery-service'
+include 'bdd-tests'
