@@ -125,21 +125,6 @@ Start all services first, then run:
 
 Reports are generated under `bdd-tests/build/reports/tests/test/` and `bdd-tests/target/jbehave-reports/`.
 
-## Agile / Git workflow
-
-Suggested branch strategy:
-
-- `main` — stable releases
-- `develop` — integration branch
-- `feature/*` — user stories (e.g. `feature/order-cancellation`)
-
-Example workflow:
-
-```bash
-git checkout -b feature/menu-search
-# implement, test, commit
-git push -u origin feature/menu-search
-```
 
 ## Tech stack
 
@@ -149,15 +134,3 @@ git push -u origin feature/menu-search
 - JUnit 5 + Mockito
 - JBehave + Rest Assured
 - Gradle multi-module build
-
-## Next steps (optional enhancements)
-
-- Replace H2 with PostgreSQL (Docker Compose)
-- Add JWT authentication in `user-service`
-- Introduce Kafka for async order/delivery events
-- Add Spring Boot Actuator dashboards and distributed tracing
-- Containerize services with Docker
-
-## License
-
-MIT
